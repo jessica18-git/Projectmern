@@ -1,0 +1,1776 @@
+/* General reset for margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo {
+  height: 30px;
+}
+
+.location-dropdown, .search-bar {
+  background-color: white;
+  border: 1px solid rgba(227, 227, 227, 1.00);
+  border-radius: 7px;
+  padding-left: 1px !important; /* Ensure reduced padding */
+  padding-right: 5px !important; /* Ensure reduced padding */
+  
+}
+
+
+.location-dropdown .form-control,
+.search-bar .form-control {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+.location-dropdown .input-group-text,
+.search-bar .input-group-text {
+  padding: 0 5px !important;
+  margin: 0 !important;
+  background-color: transparent;
+  border: none;
+}
+
+.search-bar {
+  max-width: 300px;
+  margin-left: -5px;
+}
+
+.location-dropdown {
+  margin-left: 200px;
+  max-width: 210px;
+}
+
+.navbar .nav-link {
+  margin-left: 20px;
+  color: #000;
+}
+
+.navbar .nav-link:hover {
+  color: #000;
+}
+
+.navbar .input-group-text {
+  background-color: white;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 510px;
+  }
+
+  .location-dropdown, .search-bar {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar .nav-link {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .location-dropdown,
+  .search-bar,
+  .navbar-nav {
+    display: none !important;
+  }
+
+  .navbar-brand {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+
+
+
+
+
+/* Location Overlay Styles */
+/* Full-screen overlay */
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;/* semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050; 
+}
+
+/* Centered card within overlay */
+.overlay-card {
+  max-width: 400px;
+  width: 90%;
+  background-color: white;
+  border-radius: 10px;
+  margin-right: 370px;
+}
+
+
+.location-card {
+  margin-left: 420px;
+  margin-top: 70px;
+  width: 470px;
+  max-width: 90%;
+  background-color: white;
+  border: 1px solid rgba(227, 227, 227, 1);
+  border-radius: 7px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(227, 227, 227, 1);
+  border-radius: 7px;
+  padding: 0.6em;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding-left: 5px !important;
+  font-size: 1rem;
+}
+
+.input-group .icon {
+  margin-right: 10px;
+  color: #6c63ff;
+}
+
+.text-primary {
+  color: #6c63ff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.text-muted {
+  color: #888;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.dropdown-card {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid rgba(227, 227, 227, 1.00);
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dropdown-card h5 {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-card .badge {
+  cursor: pointer;
+  border: 1px solid rgba(227, 227, 227, 1.00);
+  padding: 10px;
+  background-color: white;
+}
+
+.dropdown-card .badge:hover {
+  background-color: rgba(227, 227, 227, 0.3);
+}
+
+
+
+
+
+
+/*home page*/
+
+
+.homepage {
+  padding: 20px;
+}
+
+.homepage h1 {
+  margin-top: 20px;
+  font-size: 34px;
+  line-height: 70%;
+}
+
+.services-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  width: 500px;
+  height: 370px;
+  margin-top: 40px;
+}
+.services-section
+h2{
+  font-size: 18px;
+  padding: 10px;
+  color: rgba(84, 84, 84, 1.00);
+  font-weight: bold;
+}
+
+
+
+.services-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-row {
+  display: flex;
+  gap: 1px;
+  margin-bottom: 10px;
+}
+
+.service-card {
+  text-align: center;
+  flex: 1;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.image-wrapper {
+  width: 140px; 
+  height: 75px; 
+  background-color: #f5f5f5; /* Light background color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px; 
+  overflow: hidden;
+  padding: 10px; /* padding to the image */
+}
+
+.image-wrapper img {
+  width: 60px; 
+  height: 60px; 
+  object-fit: contain; 
+}
+
+.service-description {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #333;
+  text-align: center;
+}
+
+.stats-section {
+ margin-top: -1410px;
+  display: flex;
+  gap: 140px;
+  align-items: center;
+  
+}
+.stats-section
+img{
+  height: 50px;
+  width: 50px;
+  margin-right: 20px;
+}
+
+.stat {
+  text-align: center;
+
+  margin-left: -60px;
+  
+}
+
+.discrip {
+  font-size: 13px;
+  color: #666; 
+  margin-left: 100px;
+}
+
+.image-section img {
+  width: 600px;
+  height: auto;
+  object-fit: cover;
+  margin-left: 580px;
+  margin-top: -620px;
+}
+
+
+
+/*cart field*/
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-icon {
+  width: 210px; /* Adjust size as needed */
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+p {
+  margin-top: -10px;
+  font-size: 14.5px;
+  color: #666;
+}
+
+.explore-button {
+  
+  margin-top: -5px;
+  padding: 7px 10px;
+  background-color: white; /* Adjust color as needed */
+  color: rgb(110, 66, 229);
+  border: 1px solid rgb(222, 222, 222);
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.explore-button:hover {
+  background-color: #bfbfc0; /* Slightly darker shade on hover */
+}
+
+
+/*bookings*/
+.bookings-container {
+  text-align: center;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.back-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.bookings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  margin-left: 400px;
+  
+}
+
+.help-button {
+  margin-right: 400px;
+  background:white;
+  color: rgb(110, 66, 229);
+  border: 1px solid rgb(222, 222, 222);
+  border-radius: 5px;
+  padding: 6px 15px;
+  cursor: pointer;
+  font-size: 14.5px;
+}
+
+.bookings-content {
+  margin-top: 1rem;
+  
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  
+}
+
+p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.explore-link {
+  color: rgb(110, 66, 229); /* Customize color as per your theme */
+  text-decoration: none;
+ 
+}
+
+
+/*salon css*/
+.salon-container-updated {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  
+}
+
+.salon-header-updated {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.salon-header-updated h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: -1px;
+  
+}
+
+.rating-updated {
+  display: flex;
+  align-items: center;
+}
+.review{
+ margin-top: 80px; 
+}
+.rating-badge-updated {
+  background-color: #266929;
+  color: white;
+  padding: 2px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-right: 5px;
+  margin-top: 80px;
+  
+  margin-left: -265px;
+}
+
+
+
+
+.services-section-updated {
+  position: sticky;
+  top: 0; /* Adjust this value if you want it to stick below the navbar */
+  z-index: 10; /* Ensure it appears on top if there are overlapping elements */
+ 
+ 
+}
+
+
+.services-section-updated h3 {
+  font-size: 12px;
+  margin-top: 30px;
+  color: rgb(117, 117, 117);
+  
+  
+}
+
+.services-grid-updated {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+  width: 170px;
+  height: 160px;  
+}
+.services-grid-updated{
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  width: 340px;
+  height: 400px;
+  padding: 20px;
+ 
+}
+
+
+.service-item-updated {
+  text-align: center;
+  color: black;
+  text-decoration: none;
+ 
+  
+}
+
+.service-image-updated {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  margin-bottom: -1px;
+}
+.salonpara{
+  font-size: 12px;
+  color: black;
+  margin-top: 2px;
+}
+
+.banner-section-updated {
+  margin-top: 5px;
+}
+
+
+
+.banner-label-updated {
+  background-color: #606060;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 300px;
+}
+
+.banner-updated h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.banner-updated p {
+  margin: 10px 0;
+}
+
+.banner-image-updated {
+  width: 850px;
+  margin-top: -650px;
+  border-radius: 5px;
+  margin-left: 370px;
+}
+
+
+
+/*home page- 2nd sectiom*/
+.carousel-section {
+  margin: 20px 0;
+  text-align: center;
+  position: relative;
+  top: 220px;
+}
+
+.carousel-slide {
+  cursor: pointer;
+  text-align: center;
+}
+
+.carousel-image {
+  width: 95%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.carousel-image:hover {
+  transform: scale(1.05);
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next-arrow {
+  right: -20px;
+}
+
+.prev-arrow {
+  left: -20px;
+}
+
+
+
+
+
+/* New CSS for Most Booked Services Section */
+.most-booked-section {
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+  
+}
+
+.most-booked-section p {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  margin-right: 900px;
+  color: #333;
+}
+
+.most-booked-card {
+  cursor: pointer;
+  text-align: center;
+  padding: 10px;
+}
+
+.most-booked-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.most-booked-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.most-booked-details h3 {
+  font-size: 0.9rem;
+  margin: 10px 0 5px;
+  color: #333;
+  display: inline;
+}
+
+.most-booked-details .rating {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 5px;
+ 
+}
+
+
+
+.most-booked-details .price {
+  font-size: 1rem;
+  color: #333;
+  
+}
+
+
+
+
+
+
+
+/*newly added 3 sections-first one*/
+.carousel-wrapper {
+  padding: 20px;
+  border-radius: 8px;
+  margin: 900px 0;
+}
+
+/* Header styling */
+.carousel-heading  {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  margin-right: 900px;
+  margin-left: 20px;
+  color: #333;
+}
+
+/* Styling for the cards inside the carousel */
+.beauty-card {
+  text-align: center;
+  padding-right: 20px;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.beauty-card:hover {
+  transform: scale(1.02);
+  box-shadow: none;
+  
+}
+
+/* Styling for the images inside the cards */
+.beauty-image {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  height: 280px;
+  display: block;
+  margin: 0;
+  border: 1px solid rgb(211, 208, 208);
+  
+}
+
+/* Service title styling */
+.service-title {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Custom arrow styling */
+.arrow-next-btn,
+.arrow-prev-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.arrow-next-btn:hover,
+.arrow-prev-btn:hover {
+  background-color:rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+/* Arrow positioning */
+.arrow-next-btn {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+}
+
+.arrow-prev-btn {
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+}
+
+
+
+/*sofa*/
+/*sofa*/
+.hover-image-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.hover-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 1230px; /* Adjust as per your design */
+  height: 400px; 
+}
+
+.hover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.1s ease, opacity 0.6s ease;
+}
+
+.hover-image-wrapper:hover .hover-image {
+  transform: scale(1.02); /* Very slight zoom effect */
+  opacity: 0.98; /* Minimal opacity change */
+}
+
+
+
+
+
+/*lastwo-1st*/
+.another-carousel-wrapper {
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  margin-top:-870px;
+}
+
+/* Header styling */
+.another-carousel-heading  {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  margin-right: 900px;
+  margin-left: 20px;
+  color: #333;
+}
+
+/* Styling for the cards inside the carousel */
+.another-card {
+  text-align: center;
+  padding-right: 20px;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.another-card:hover {
+  transform: scale(1.02);
+  box-shadow: none;
+  
+}
+
+/* Styling for the images inside the cards */
+.another-image {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  height: 280px;
+  display: block;
+  margin: 0;
+  border: 1px solid rgb(211, 208, 208);
+  
+}
+
+/* Service title styling */
+.another-title {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Custom arrow styling */
+.arrow-next-btn,
+.arrow-prev-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.arrow-next-btn:hover,
+.arrow-prev-btn:hover {
+  background-color:rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+/* Arrow positioning */
+.arrow-next-btn {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+}
+
+.arrow-prev-btn {
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+}
+
+
+
+
+
+/*last and final one*/
+.last-carousel-wrapper {
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  margin-top:15px;
+}
+
+/* Header styling */
+.last-carousel-heading  {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  margin-right: 900px;
+  margin-left: 20px;
+  color: #333;
+}
+
+/* Styling for the cards inside the carousel */
+.last-card {
+  text-align: center;
+  padding-right: 20px;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.last-card:hover {
+  transform: scale(1.02);
+  box-shadow: none;
+  
+}
+
+/* Styling for the images inside the cards */
+.last-image {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  height: 240px;
+  display: block;
+  margin: 0;
+ 
+  
+}
+
+/* Service title styling */
+.last-title {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Custom arrow styling */
+.arrow-next-btn,
+.arrow-prev-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.arrow-next-btn:hover,
+.arrow-prev-btn:hover {
+  background-color:rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+/* Arrow positioning */
+.arrow-next-btn {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+}
+
+.arrow-prev-btn {
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+}
+
+
+
+/*FOOTER PAGE*/
+.footer {
+  background-color: rgb(243, 242, 242);
+  padding: 70px 30px;
+  font-family: Arial,;
+  color: #333;
+  height: 470px;
+  margin-top: 50px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  margin-top: 25px;
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-family: Arial,;
+}
+
+.footer-section ul {
+ 
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 10px 0;
+  font-size: 14px;
+  
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #666;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #000;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 20px;
+  color: #666;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #000;
+}
+
+.app-links img {
+  width: 130px;
+  margin: 10px 0;
+  display: block;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #888;
+}
+.footerlogo{
+  height: 41px;
+  width: 150px;
+  margin-top: -35px;
+  margin-left: 10px;
+
+ 
+}
+
+
+
+
+
+/*log in auth*/
+/* Profile Dropdown */
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: 50px; /* Adjust based on your Navbar */
+  right: 10px; /* Align with your profile icon */
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 100;
+  min-width: 120px;
+  text-align: center;
+}
+
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 400px;
+  position: relative;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.input-container {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.input-container input,
+.country-code {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+}
+
+.proceed-btn {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  background: #ccc;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.proceed-btn:hover {
+  background: #777;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*home page media qu*/
+/* Mobile view styling */
+/* Mobile view for very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .homepage h1 {
+    font-size: 20px; /* Smaller font size */
+    margin-top: 10px;
+  }
+
+  .services-section {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    padding: 8px;
+  }
+
+  .services-section h2 {
+    font-size: 14px; /* Smaller font size */
+    padding: 8px;
+  }
+
+  /* Adjust the grid layout for 2 rows and 3 columns */
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 10px; /* Spacing between items */
+  }
+
+  .service-row {
+    display: grid; /* Switch to grid layout */
+    grid-template-columns: 1fr; /* Single column */
+    margin-bottom: 0;
+  }
+  
+  .service-card {
+    justify-content: center;
+    flex: none; /* Avoid flex issues in grid */
+  }
+
+/* Adjust image wrapper to fit better in grid layout */
+.image-wrapper {
+  width: 100px;
+  height: 55px;
+}
+
+/* Adjust font size of service description */
+.service-description {
+  font-size: 12px; /* Adjusted font size for readability */
+}
+  .stats-section {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .discrip {
+    font-size: 12px;
+    margin-left: 0;
+  }
+
+  .image-section img {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
+
+
+
+/*MAIN ONE*/
+/* Mobile view (max-width: 767px) */
+@media (max-width: 767px) {
+  .homepage h1 {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+
+  .services-section {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  .services-section h2 {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .services-grid {
+    flex-direction: column;
+  }
+
+  .service-card {
+    flex: 1 0 100%;
+    padding: 10px;
+  }
+
+  .image-wrapper {
+    width: 120px;
+    height: 60px;
+  }
+
+  .service-description {
+    font-size: 14px;
+  }
+
+  .stats-section {
+    
+    gap: 20px;
+    margin-top: -1800px;
+    flex-direction: row;
+    margin-left: 100px;
+    gap: 180px;
+    
+    
+  }
+
+  .discrip {
+    font-size: 12px;
+    margin-left: 0;
+  }
+
+  .image-section img {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+
+
+
+
+/* Tablet view (min-width: 768px and max-width: 1024px) */
+@media (min-width: 767px) and (max-width: 1024px) {
+  .homepage h1 {
+    font-size: 28px;
+    margin-top: 15px;
+  }
+
+  .services-section {
+    width: 80%;
+    height: auto;
+    margin-top: 30px;
+    padding: 12px;
+  }
+
+  .services-section h2 {
+    font-size: 17px;
+    padding: 9px;
+  }
+
+  .service-card {
+    flex: 1 0 45%;
+    padding: 8px;
+  }
+
+  .image-wrapper {
+    width: 130px;
+    height: 70px;
+  }
+
+  .service-description {
+    font-size: 13px;
+  }
+
+  .stats-section {
+    gap: 80px;
+    margin-top: -1100px;
+  }
+
+  .image-section img {
+    width: 80%;
+    margin-left: 0;
+    margin-top: -550px;
+  }
+}
+
+/* Desktop view (min-width: 1025px) */
+@media (min-width: 1025px) {
+  .homepage h1 {
+    font-size: 34px;
+  }
+
+  .services-section {
+    width: 500px;
+    margin-top: 40px;
+    padding: 15px;
+  }
+
+  .services-section h2 {
+    font-size: 18px;
+  }
+
+  .service-card {
+    flex: 1 0 30%;
+  }
+
+  .image-wrapper {
+    width: 140px;
+    height: 75px;
+  }
+
+  .service-description {
+    font-size: 12px;
+  }
+
+  .stats-section {
+    margin-top: -1410px;
+  }
+
+  .image-section img {
+    width: 600px;
+    margin-left: 580px;
+    margin-top: -620px;
+  }
+}
+
+
+
+
+
+/* Mobile view for very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .carousel-section {
+    top: 200px; /* Adjust top position */
+  }
+
+  .carousel-image {
+    width: 85%;
+    height: 180px; /* Reduced height for smaller screens */
+  }
+
+  .custom-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 18px; /* Smaller arrows */
+  }
+}
+
+
+
+
+
+/*MAIN*/
+/* Mobile view (max-width: 767px) */
+@media (max-width: 767px) {
+  .carousel-section {
+    top: 585px; 
+    margin-left: -1px;
+  }
+
+  .carousel-image {
+    width: 100%;
+    height: 220px; 
+    
+  }
+
+  .custom-arrow {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+   
+  }
+}
+
+
+
+
+
+
+
+/* Tablet view (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .carousel-section {
+    top: 80px; /* Adjust top position */
+  }
+
+  .carousel-image {
+    width: 90%;
+    height: 210px; /* Adjust height for tablet */
+  }
+
+  .custom-arrow {
+    width: 50px;
+    height: 50px;
+    font-size: 22px; /* Arrows slightly bigger for tablets */
+  }
+}
+
+/* Desktop view (min-width: 1025px) */
+@media (min-width: 1025px) {
+  .carousel-section {
+    top: 220px; /* Keep original top position */
+  }
+
+  .carousel-image {
+    width: 95%;
+    height: 220px; /* Standard height for large screens */
+  }
+
+  .custom-arrow {
+    width: 50px;
+    height: 50px;
+    font-size: 24px; /* Standard size for arrows */
+  }
+}
+
+
+
+
+
+/* Mobile view for very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .most-booked-section {
+    margin: 100px 0;
+  }
+
+  .most-booked-section p {
+    font-size: 1.4rem;
+    margin-right: 0; /* Adjust margin for small screens */
+  }
+
+  .most-booked-card {
+    padding: 5px;
+  }
+
+  .most-booked-image {
+    height: 180px; /* Adjust image size for small screens */
+  }
+
+  .most-booked-details h3 {
+    font-size: 0.8rem;
+  }
+
+  .most-booked-details .rating,
+  .most-booked-details .price {
+    font-size: 0.8rem;
+  }
+}
+
+
+
+
+/*MAIN*/
+/* Mobile view (max-width: 767px) */
+@media (max-width: 767px) {
+  .most-booked-section {
+    margin: 630px 0;
+  }
+
+  .most-booked-section p {
+    font-size: 1.6rem;
+    margin-right: 0;
+  }
+
+  .most-booked-card {
+    padding: 8px;
+  }
+
+  .most-booked-image {
+    width: 100%;
+    height: 220px;  /* Adjust image size for mobile screens */
+  }
+
+  .most-booked-details h3 {
+    font-size: 0.85rem;
+  }
+
+  .most-booked-details .rating,
+  .most-booked-details .price {
+    font-size: 0.85rem;
+  }
+}
+
+/* Tablet view (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .most-booked-section {
+    margin: 200px 0;
+  }
+
+  .most-booked-section p {
+    font-size: 1.7rem;
+  }
+
+  .most-booked-card {
+    padding: 10px;
+  }
+
+  .most-booked-image {
+    height: 220px; /* Adjust height for tablet screens */
+  }
+
+  .most-booked-details h3 {
+    font-size: 0.9rem;
+  }
+
+  .most-booked-details .rating,
+  .most-booked-details .price {
+    font-size: 0.9rem;
+  }
+}
+
+/* Desktop view (min-width: 1025px) */
+@media (min-width: 1025px) {
+  .most-booked-section {
+    margin: 370px 0;
+  }
+
+  .most-booked-section p {
+    font-size: 1.8rem;
+    margin-right: 900px;
+  }
+
+  .most-booked-image {
+    height: 240px; /* Standard height for large screens */
+  }
+
+  .most-booked-details h3 {
+    font-size: 0.9rem;
+  }
+
+  .most-booked-details .rating,
+  .most-booked-details .price {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+/* Mobile view for very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .hover-image-wrapper {
+    width: 100%; /* Full width for mobile screens */
+    height: 200px; /* Reduced height for mobile screens */
+  }
+
+  .hover-image-wrapper:hover .hover-image {
+    transform: scale(1.05); /* Less scaling on smaller screens */
+    opacity: 0.8;
+  }
+}
+
+/* Mobile view (max-width: 767px) */
+@media (max-width: 767px) {
+  .hover-image-wrapper {
+    width: 100%; /* Full width for mobile screens */
+    height: 250px; /* Adjusted height for mobile screens */
+  }
+
+  .hover-image-wrapper:hover .hover-image {
+    transform: scale(1.07); /* Slight scaling for mobile */
+    opacity: 0.85;
+  }
+}
+
+/* Tablet view (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hover-image-wrapper {
+    width: 90%; /* Reduced width for tablets */
+    height: 300px; /* Adjust height for tablets */
+  }
+
+  .hover-image-wrapper:hover .hover-image {
+    transform: scale(1.08); /* Slightly larger scaling for tablets */
+    opacity: 0.9;
+  }
+}
+
+/* Desktop view (min-width: 1025px) */
+@media (min-width: 1025px) {
+  .hover-image-wrapper {
+    width: 1230px; /* Default width for desktops */
+    height: 400px; /* Default height */
+  }
+
+  .hover-image-wrapper:hover .hover-image {
+    transform: scale(1.1); /* Standard scaling for desktops */
+    opacity: 0.9;
+  }
+}
+
+
+
+/*beauty*/
+/*MAIN*/
+/* Mobile view (max-width: 767px) */
+@media (max-width: 767px) {
+  .carousel-wrapper {
+    margin: 630px 0;
+  }
+
+  .carousel-heading p {
+  font-size: 1.8rem;    /* Maintain font size */
+  margin: 0% auto;
+  white-space: nowrap;       /* Prevents text wrapping */
+  overflow: hidden;          /* Hides any overflowing text */
+  text-overflow: ellipsis;   /* Adds "..." if the text overflows */
+  max-width: 100%;  
+  
+  }
+
+  .beauty-card {
+    padding: 8px;
+  }
+
+  .beauty-image {
+    width: 100%;
+    height: 220px;  /* Adjust image size for mobile screens */
+  }
+
+
+
+}
+
+
+
+
+
+/*ac&app repair*/
+/*MAIN*/
+/* Mobile view (max-width: 767px) */
+@media (max-width: 767px) {
+  .another-carousel-wrapper {
+   position: relative;
+    margin-top: -600px;
+  }
+
+  .another-carousel-heading p {
+    font-size: 1.8rem;
+    margin-right: 0;
+  }
+
+  .another-card {
+    padding: 8px;
+  }
+
+  .another-image {
+    height: 220px;
+    width: 385px; /* Adjust image size for mobile screens */
+  }
+
+
+
+}
