@@ -17,7 +17,7 @@ const Footer = () => {
             <li><Link to="/anti-discrimination">Anti-discrimination policy</Link></li>
             <li><Link to="/uc-impact">UC impact</Link></li>
             <li><Link to="/careers">Careers</Link></li>
-            <li><Link to="/careers">Careers</Link></li>
+            
           </ul>
         </div>
 

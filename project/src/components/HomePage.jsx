@@ -115,16 +115,16 @@ function HomePage() {
   };
 
   const mostBookedServices = [
-    { image: mbs1, title: "Intense bathroom cleaning", rating: "4.78 (1.8M)", price: "₹549", route: "/bathroom-cleaning" },
-    { image: mbs2, title: "Intense cleaning (2 bathrooms)", rating: "4.78 (1.8M)", price: "₹988", route: "/cleaning-2-bathrooms" },
-    { image: mbs3, title: "Fully automatic washing machine check-up (top load)", rating: "4.82 (282K)", price: "₹299", route: "/washing-machine-checkup" },
-    { image: mbs4, title: "Fan repair (ceiling/exhaust/wall)", rating: "4.82 (118K)", price: "₹109", route: "/fan-repair" },
-    { image: mbs5, title: "Fully automatic washing machine check-up (front load)", rating: "4.80 (126K)", price: "₹299", route: "/washing-machine-front-load" },
-    { image: mbs6, title: "Power saver AC service", rating: "4.82 (754K)", price: "₹899", route: "/power saver" },
-    { image: mbs7, title: "AC uninstallation", rating: "4.87 (104K)", price: "₹399", route: "/ac-uninstallation" },
-    { image: mbs8, title: "Water purifier repair", rating: "4.81 (134K)", price: "₹299", route: "/water-purifier" },
-    { image: mbs9, title: "Classic bathroom cleaning", rating: "4.83 (1.2M)", price: "₹469", route: "/bathroom-cleaning" },
-    { image: mbs10, title:"Move-in bathroom cleaning", rating: "4.78 (175K)", price: "₹599", route: "/move-in" },
+    { image: mbs1, route: "/most1", title: "Intense bathroom cleaning", rating: 4.82, reviews: "117K", price: "₹109" },
+       { image: mbs2, route: "/most2", title: "Intense cleaning (bathrooms)", rating: 4.86, reviews: "81K", price: "₹79" },
+       { image: mbs3, route: "/most3", title: "machine check-up (top load)", rating: 4.86, reviews: "17K", price: "₹239" },
+       { image: mbs4, route: "/most4", title: "Fan repair (ceiling/exhaust)", rating: 4.86, reviews: "52K", price: "₹49" },
+       { image: mbs5, route: "/most5", title: "machine check-up (front load)", rating: 4.84, reviews: "25K", price: "₹169" },
+       { image: mbs6, route: "/most6", title: "Power saver AC service", rating: 4.80, reviews: "102K", price: "₹199" },
+       { image: mbs7, route: "/most7", title: "AC uninstallation", rating: 4.89, reviews: "47K", price: "₹99" },
+       { image: mbs8, route: "/most8", title: "Water purifier repair", rating: 4.82, reviews: "83K", price: "₹139" },
+       { image: mbs9, route: "/most9", title: "Classic bathroom cleaning", rating: 4.85, reviews: "66K", price: "₹159" },
+       { image: mbs10, route: "/most10", title: "Move-in bathroom cleaning", rating: 4.87, reviews: "91K", price: "₹129" },
   ];
 
   return (
@@ -184,58 +184,60 @@ function HomePage() {
             <div
               key={index}
               className="carousel-slide"
-              onClick={() => (window.location.href = slide.route)}
-            >
-              <img src={slide.image} alt={`Slide ${index + 1}`} className="carousel-image" />
+              onClick={() => (window.location.href = slide.route)}>
+               <img src={slide.image} alt={`Slide ${index + 1}`} className="carousel-image" />
+
             </div>
           ))}
         </Slider>
       </div>
 
       {/* Most Booked Services Section */}
-      <div className="most-booked-section container-fluid">
-        <p>Most Booked Services</p>
-        <Slider {...mostBookedSettings}>
-          {mostBookedServices.map((service, index) => (
-            <div
-              key={index}
-              className="most-booked-card"
-              onClick={() => (window.location.href = service.route)}
-            >
-              <img src={service.image} alt={service.title} className="most-booked-image" />
-              <div className="most-booked-details">
-                <h3>{service.title}</h3>
-                <p className="rating"><IoIosStar /> {service.rating}</p>
-                <p className="price">{service.price}</p>
-              </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
+      {mostBookedServices.length > 0 && (
+  <div className="most-booked container-fluid">
+    <p>Most Booked Services</p>
+    <Slider {...mostBookedSettings}>
+      {mostBookedServices.map((service, index) => (
+        <div
+          key={index}
+          className="most-card"
+          onClick={() => (window.location.href = service.route)}>
+          <img src={service.image} alt={service.title} className="most-booked-image" />
+          <div className="most-booked-details">
+            <h3>{service.title}</h3>
+            <p className="rating"><IoIosStar /> {service.rating}</p>
+            <p className="price">{service.price}</p>
+          </div>
+        </div>
+      ))}
+    </Slider>
+  </div>
+)}
 
+
+      {/* Right Section */}
       <div className="container">
-        <div className="stats-section">
-          <div className="stat">
-            <img src={star} alt="Service Rating" />
-            <span>4.8</span>
-            <p className="discrip">Service Rating</p>
-          </div>
-          <div className="stat">
-            <img src={people} alt="Customers Globally" />
-            <span>12M+</span>
-            <p className="discrip">Customers Globally</p>
-          </div>
-        </div>
-
-        <div className="image-section">
-          <img src={urban1} alt="Salon service" />
-        </div>
-      </div>
+  <div className="stats-section">
+    <div className="stat">
+      <img src={star} alt="service rating" />
+      <span className="stat-value">4.8</span>
+      <p className="discrip">Service Rating</p>
     </div>
+    <div className="stat">
+      <img src={people} alt="Customers Globally" />
+      <span className="stat-value">12M+</span>
+      <p className="discrip">Customers Globally</p>
+    </div>
+  </div>
+  <div className="image-section">
+    <img src={urban1} alt="Salon service" />
+  </div>
+</div>
+</div>
     
 
    
   );
 }
 
-export default HomePage;
+export default HomePage;   

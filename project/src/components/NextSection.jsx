@@ -64,8 +64,8 @@ function ServicesCarousel() {
   };
 
   const beautyServices = [
-    { image: sfwo1, route:"/pedicure" },
-    { image: sfwo2, route: "/manicure" },
+    { image: sfwo2, route:"/pedicure" },
+    { image: sfwo1, route: "/manicure" },
     { image: sfwo3, route: "/haircare" },
     { image: sfwo4, route: "/facial" },
     { image: sfwo5, route: "/bleach" },
@@ -75,7 +75,7 @@ function ServicesCarousel() {
 
   return (
     <div className="carousel-wrapper">
-      <p className="carousel-heading">Salon for Women</p>
+      <p className="carousel-heading m-0">Salon for Women</p>
       <Slider {...carouselConfig}>
         {beautyServices.map((service, index) => (
           <div key={index} className="beauty-card">
@@ -150,7 +150,7 @@ function AnotherCarousel() {
 
   return (
     <div className="another-carousel-wrapper">
-      <p className="another-carousel-heading">AC & appliance repair</p>
+      <p className="another-carousel-heading  m-0">AC & appliance repair</p>
       <Slider {...carouselConfig}>
         {otherServices.map((service, index) => (
           <div

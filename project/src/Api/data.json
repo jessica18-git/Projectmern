@@ -1,0 +1,82 @@
+[
+  {
+    "name": "hello",
+    "email": "jessicavincy18@gmail.com",
+    "password": "something",
+    "confirmPassword": "something",
+    "date": "2025-01-02",
+    "number": "9994659905"
+  },
+  {
+    "name": "yuvan",
+    "email": "jessicavincy18@gmail.com",
+    "password": "password",
+    "confirmPassword": "password",
+    "date": "2025-01-02",
+    "number": "9994659905"
+  },
+  {
+    "name": "agalya",
+    "email": "johndoe@example.com",
+    "password": "agalyaaaa",
+    "confirmPassword": "agalyaaaa",
+    "date": "2025-01-24",
+    "number": "9994659905"
+  },
+  {
+    "name": "John",
+    "email": "johndoe@example.com",
+    "password": "checkinggg",
+    "confirmPassword": "checkinggg",
+    "date": "2025-01-10",
+    "number": "9994659905"
+  },
+  {
+    "name": "newname",
+    "email": "kkkk@gmail.com",
+    "password": "newpassword",
+    "confirmPassword": "newpassword",
+    "date": "2025-01-11",
+    "number": "9365826487"
+  },
+  {
+    "name": "veronica",
+    "email": "jessicavincy18@gmail.com",
+    "password": "password",
+    "confirmPassword": "password",
+    "date": "2025-01-25",
+    "number": "7453923656"
+  },
+  {
+    "name": "sneeha",
+    "email": "johndoe@example.com",
+    "password": "something",
+    "confirmPassword": "something",
+    "date": "2025-01-14",
+    "number": "8463927465"
+  },
+  {
+    "name": "mithra",
+    "email": "johndoe@example.com",
+    "password": "password",
+    "confirmPassword": "password",
+    "date": "2025-01-16",
+    "number": "8535476"
+  },
+  {
+    "name": "Jessica Vincy",
+    "email": "jessicavincy18@gmail.com",
+    "password": "password",
+    "confirmPassword": "password",
+    "date": "2007-01-16",
+    "number": "9994649905"
+  },
+  {
+    "name": "Jessica Vincy",
+    "email": "pondy@spectraedu.co.in",
+    "password": "passkkk",
+    "confirmPassword": "passkkk",
+    "date": "2025-02-21",
+    "number": "9994649905"
+  }
+]
